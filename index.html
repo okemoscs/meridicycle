@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+    <script src="vue.js"></script>
+    <script src="axios.min.js"></script>
+    <script src="vue.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <div v-for="store in stores">
+        	<div>{{store}}</div>
+        </div>
+    </div>
+</body>
+<script type="text/javascript">
+var app = new Vue({
+    el: '#app',
+    created: function() {
+    	var self = this;
+        axios.get('db.json')
+            .then(function(response) {
+                self.stores = JSON.parse(response.data);
+                console.log(self.stores)
+            })
+    },
+    data: {
+        message: 'Hello Vue!',
+        stores: {}
+    }
+})
+</script>
+
+</html>
