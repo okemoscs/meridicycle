@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+<<<<<<< HEAD
   <head>
     <!--Import Google Icon Font-->
   <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -159,3 +160,39 @@ for (var i = 0; i < aTags.length; i++) {
 
 
 </html>
+=======
+
+<head>
+    <title></title>
+    <script src="vue.js"></script>
+    <script src="axios.min.js"></script>
+    <script src="vue.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <div v-for="store in stores">
+        	<div>{{store}}</div>
+        </div>
+    </div>
+</body>
+<script type="text/javascript">
+var app = new Vue({
+    el: '#app',
+    created: function() {
+    	var self = this;
+        axios.get('db.json')
+            .then(function(response) {
+                self.stores = JSON.parse(response.data);
+                console.log(self.stores)
+            })
+    },
+    data: {
+        message: 'Hello Vue!',
+        stores: {}
+    }
+})
+</script>
+
+</html>
+>>>>>>> 9167a5d86829828f47e0d2aa43beb307c7c77066

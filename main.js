@@ -1,5 +1,11 @@
-var csvjson = require('csvjson');
-var fs = require('fs');
-var data = fs.readFileSync('RDB.csv', { encoding : 'utf8'});
-
-console.log(csvjson.toObject(data));
+xlsxj = require("xlsx-to-json");
+ xlsxj({
+   input: "RDB.xlsx",
+   output: "rdb.json"
+ }, function(err, result) {
+   if(err) {
+     console.error(err);
+   }else {
+     console.log(result);
+   }
+ });
