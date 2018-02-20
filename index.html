@@ -47,7 +47,7 @@ sr.reveal('.Reveal', { container: '.Container' });
       </div>
 
 
-      <div class="col s12 pad-this">
+      <div id = "search-wrapper" class="col s12 pad-this">
        <nav>
     <div class="nav-wrapper turn-text-white">
       <form>
@@ -97,28 +97,26 @@ sr.reveal('.Reveal', { container: '.Container' });
     data: db.card
   }
 })
-$.each(db.card, function (key, data) {
-  for(var i = 0; i < db.length; i++) {
-    console.log(data);
-    $('#append').append(' <div class="row container wow animate bounceIn Reveal">');
-    $('#append').append('<div class="col s12 m12">');
-    $('#append').append('<div class="card island-green">');
-    $('#append').append('<div class="card-content white-text">');
-    $('#append').append('<span class="card-title">' + data[i].name + '</span>');
 
-    if(data[i].address != "") {
-       $('#append').append('<span class="card-sub-title">' + data[0].address + '</span>');
+
+const search-bar = new Vue ({
+  el: '#search-bar',
+  data: {
+    search: '',
+    list: db,
+  },
+  computed: {
+    filteredList() {
+      return this.postList.filter(post => {
+        return post.title.toLowerCase().includes(this.search.toLowerCase())
+      })
     }
-
-    $('#append').append('<p id="p1">' + data[0].recyclables + '</p>');
-    $('#append').append(' </div> </div> </div> </div>');
-   
-}
-});
+  }
+})
 
 
 
 
-  </script>
+   </script>
 </body>
 </html>
