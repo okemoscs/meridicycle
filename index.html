@@ -99,20 +99,6 @@ sr.reveal('.Reveal', { container: '.Container' });
 })
 
 
-const search-bar = new Vue ({
-  el: '#search-bar',
-  data: {
-    search: '',
-    list: db,
-  },
-  computed: {
-    filteredList() {
-      return this.postList.filter(post => {
-        return post.title.toLowerCase().includes(this.search.toLowerCase())
-      })
-    }
-  }
-})
 
 
 
