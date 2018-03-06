@@ -22,13 +22,7 @@ sr.reveal('.Reveal', { container: '.Container' });
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script type="text/javascript" src="css/wow.js"></script>
 
-  <script>
-    document.getElementById('moar').onclick = function() {
-      var section = document.createElement('section');
-      section.className = 'section--purple wow fadeInDown';
-      this.parentNode.insertBefore(section, this);
-    };
-  </script>
+
 
   <style>
       #map {
@@ -46,24 +40,6 @@ sr.reveal('.Reveal', { container: '.Container' });
     <script type="text/javascript" src="css/materialize/js/materialize.js"></script>
     <script type="text/javascript" src="bounce.js/bounce.js"></script>
     <script type="text/javascript" src="meridicycle/main.js"></script>
-    <script async defer
-      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDtOYK4jL59DK5URjVmDAKB0Wrhv3xBd-M&callback=initMap">
-    </script>
-    <!-- Start of Real Body-->
-    
-    <script>
-    function initMap() {
-        var uluru = {lat: -25.363, lng: 131.044};
-        var map = new google.maps.Map(document.getElementById('map'), {
-            zoom: 4,
-            center: uluru
-        });
-        var marker = new google.maps.Marker({
-            position: uluru,
-            map: map
-        });
-    }
-    </script>
 <center>
       <div class="row island-green pad-this">
        <div class="container island-green">
@@ -127,9 +103,7 @@ sr.reveal('.Reveal', { container: '.Container' });
 
 
 <div id = "append">
-  {{message}}
-
-  <div class="row container wow animate bounceIn Reveal" v-for="msg in data" v-if="msg.name.length > 0 && msg.address.length > 0">
+  <div class="row container wow animate bounceIn Reveal" v-for="msg in data" v-if="msg.name.length > 0">
 <div class="col s12 m12">
 
     <div class="card horizontal island-green">
