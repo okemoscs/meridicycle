@@ -51,6 +51,13 @@ sr.reveal('.Reveal', { container: '.Container' });
     </script>
     <!-- Start of Real Body-->
     <div id="map"></div>
+    <iframe
+  width="600"
+  height="450"
+  frameborder="0" style="border:0"
+  src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDtOYK4jL59DK5URjVmDAKB0Wrhv3xBd-M
+    &q=Friedland+Industries" allowfullscreen>
+</iframe>
     <script>
     function initMap() {
         var uluru = {lat: -25.363, lng: 131.044};
@@ -91,9 +98,9 @@ sr.reveal('.Reveal', { container: '.Container' });
 
   <div class="row container wow animate bounceIn Reveal" v-for="msg in data" v-if="msg.name.length > 0 && msg.address.length > 0">
 <div class="col s12 m12">
-    
+
     <div class="card horizontal island-green">
-      
+
       <div class="card-stacked">
         <div class="card-content white-text">
           <span class="card-title">{{msg.name}}</span>
@@ -102,11 +109,16 @@ sr.reveal('.Reveal', { container: '.Container' });
         </div>
       </div>
       <div class="card-image">
-        <img src="https://lorempixel.com/100/190/nature/6">
+          <iframe
+        width="300"
+        height="300"
+        frameborder="0" style="border:0"
+        :src="'https://www.google.com/maps/embed/v1/place?key=AIzaSyDtOYK4jL59DK5URjVmDAKB0Wrhv3xBd-M&q=' + encodeURIComponent(msg.name)" allowfullscreen>
+      </iframe>
       </div>
     </div>
   </div>
-    
+
     </div>
 
 
