@@ -4735,6 +4735,11 @@ small {
   font-weight: 300;
 }
 
+.card .card-sub-title{
+  font-size: 12px;
+  font-weight: 300;
+}
+
 .card .card-title.activator {
   cursor: pointer;
 }
