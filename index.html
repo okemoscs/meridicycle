@@ -34,6 +34,10 @@ sr.reveal('.Reveal', { container: '.Container' });
   </head>
 
   <body>
+
+
+
+
     <!--Import jQuery before materialize.js-->
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     <script type="text/javascript" src="css/materialize/js/materialize.min.js"></script>
@@ -117,12 +121,21 @@ sr.reveal('.Reveal', { container: '.Container' });
         </div>
       </div>
       <div class="card-image">
-          <iframe
+    <!--<iframe
         width="300"
         height="300"
         frameborder="0" style="border:0"
         :src="'https://www.google.com/maps/embed/v1/place?key=AIzaSyDtOYK4jL59DK5URjVmDAKB0Wrhv3xBd-M&q=' + encodeURIComponent(msg.name)" allowfullscreen>
-      </iframe>
+
+  </iframe>-->
+  <div class="switch">
+<label>
+  Off
+  <input type="checkbox">
+  <span class="lever"></span>
+  On
+</label>
+</div>
       </div>
     </div>
   </div>
