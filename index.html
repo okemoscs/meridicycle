@@ -121,20 +121,22 @@ sr.reveal('.Reveal', { container: '.Container' });
         </div>
       </div>
       <div class="card-image">
-    <!--<iframe
+          
+    <iframe
+        v-if="msg.showMap"
         width="300"
         height="300"
         frameborder="0" style="border:0"
         :src="'https://www.google.com/maps/embed/v1/place?key=AIzaSyDtOYK4jL59DK5URjVmDAKB0Wrhv3xBd-M&q=' + encodeURIComponent(msg.name)" allowfullscreen>
 
-  </iframe>-->
-  <div class="switch">
-<label>
-  Off
-  <input type="checkbox">
-  <span class="lever"></span>
-  On
-</label>
+  </iframe>
+<div class="switch">
+    <label>
+        Off
+        <input type="checkbox" v-model="msg.showMap">
+        <span class="lever"></span>
+        On
+    </label>
 </div>
       </div>
     </div>
