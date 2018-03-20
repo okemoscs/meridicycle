@@ -82,11 +82,13 @@ sr.reveal('.Reveal', { container: '.Container' });
       </div>
       <div class="card-image" style="width:'300'">
           <div class="switch">
-              <label>
-                  Off
-                  <input type="checkbox" v-model="msg.showMap">
-                  <span class="lever"></span>
-                  On
+              <label class="whiteButton">
+                  <div class="paddingStuff">
+                      Off
+                      <input type="checkbox" v-model="msg.showMap">
+                      <span class="lever"></span>
+                      On
+                  </div>
               </label>
           </div>
         <iframe
