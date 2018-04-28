@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<div class="bg">
 <html>
   <head>
     <title>Admin Login</title>
@@ -8,16 +9,14 @@
   <body>
     <h1 class="title_m">Meridian Recyling Administration</h1>
     <form class="login_form">
-      Username:<br>
-      <input id="username" class="username"type="text" name="username"placeholder="Admin Username"><br>
-      <br>
-      Password:<br>
-      <input id="password" class="password"type="password" name="password" placeholder="Password" id="showPassword">
-      <input type="checkbox" onclick="showsPassword()">Show
-      <br>
-      <br>
-      <input value="Submit" type="Submit" id="submit" name="Submit"></input>
+      <div class="text-info">Username:</div><br>
+      <input id="username" class="username-styling"type="text" name="username" placeholder="Admin Username"><br><br>
+      <div class="text-info">Password:</div><br>
+      <input id="showPassword" class="password-styling" type="password" name="password" placeholder="Password"><br><br>
+      <input type="checkbox" class="checkbox-styling" onclick="showsPassword()">
+      <div class="text-info">Show Password</div><br><br>
+      <input value="Submit" class="submit-button" type="Submit" id="submit" name="Submit"></input>
     </form>
-
   </body>
 </html>
+</div>

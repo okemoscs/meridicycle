@@ -1,18 +1,68 @@
 
 .login_form {
-  background-color: #00E676;
-  margin-right: 500px;
-  margin-left: 450px;
-  padding-right: 25px;
-  padding-left: 25px;
-  padding-top: 25px;
-  padding-bottom: 25px;
+  background-color: green;
+  text-align: center;
   margin-top: 100px;
-  font-family: Arial;
+  font-family: serif;
   color: darkgreen;
+  border-radius: 20px;
 }
 .title_m {
-  font-family: Arial;
-  color: seagreen;
-  margin-left:350px;
+  font-family: serif;
+  color: black;
+  background-color: green;
+  text-align: center;
+  border-radius: 10px;
+}
+.password-styling {
+  border-radius: 10px;
+  border-color: white;
+  font-family: serif;
+  color: black;
+}
+.username-styling {
+  border-radius: 10px;
+  border-color: white;
+  font-family: serif;
+  color: black;
+}
+::placeholder {
+  text-align: center;
+  font-family: serif;
+  color: black;
+}
+ .submit-button {
+  border-radius: 10px;
+  font-family: serif;
+  background-color: white;
+  color: black;
+}
+body {
+  background-image: url("bckgrnd.jpg");
+  height: 100%;
+}
+.text-info {
+  color: black;
+  display: inline-block;
+  font-size: 15px;
+  text-align: center;
+}
+.checkbox-styling {
+  align-self: center;
+}
+ html {
+    height: 100%;
+}
+
+.bg {
+    background-image: url("bckgrnd.jpg");
+
+    height: 100%;
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+h1 {
+  font-weight: normal;
 }
