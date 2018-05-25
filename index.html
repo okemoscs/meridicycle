@@ -124,7 +124,7 @@ sr.reveal('.Reveal', { container: '.Container' });
   },
   computed: {
     filteredList() {
-      return this.cardList.filter(card => {
+      return this.data.filter(card => {
         return card.name.toLowerCase().includes(this.search.toLowerCase())
       })
     }
