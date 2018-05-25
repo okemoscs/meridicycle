@@ -71,7 +71,7 @@ sr.reveal('.Reveal', { container: '.Container' });
   <div class="row container wow animate bounceIn Reveal" v-for="msg in data" v-if="msg.name.length > 0">
 <div class="col s12 m12">
 
-    <div class="card horizontal island-green">
+    <div class="card horizontal island-green"  v-for="card in filteredList">
 
       <div class="card-stacked">
         <div class="card-content white-text">
@@ -120,6 +120,13 @@ sr.reveal('.Reveal', { container: '.Container' });
   el: '#append',
   data: {
     data: db.card
+  },
+  computed: {
+    filteredList() {
+      return this.postList.filter(card => {
+        return card.name.toLowerCase().includes(this.search.toLowerCase())
+      })
+    }
   }
 })
 
